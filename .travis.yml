@@ -10,3 +10,10 @@ python:
 script:
   - pip install .
   - python setup.py test
+
+deploy:
+  provider: pypi
+  user: "$PYPI_USERNAME"
+  password: "$PYPI_PASSWORD"
+  on:
+    tags: true
